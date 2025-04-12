@@ -1,44 +1,69 @@
-# 📊 Stock Market Prediction Project (COSC 4368)
+# 📊 Stock Market Prediction Project 
 
 A machine learning project that predicts future stock prices based on historical NASDAQ data.  
 We use Python, Jupyter Notebooks, `yfinance`, and regression models to explore and forecast trends.
 
+We use a dataset of historical daily prices for all tickers currently trading on **NASDAQ**, sourced via the [`yfinance`](https://pypi.org/project/yfinance/) Python package and originally hosted on [Kaggle](https://www.kaggle.com/datasets/jacksoncrow/stock-market-dataset/data).
+
+The goal is to build models that learn from past stock price movements and make accurate predictions about future prices.
+
+### 🧠 Problem Statement
+> **Input**: Historical stock prices (Open, High, Low, Close, Volume, etc.)  
+> **Output**: Predicted future stock price (e.g., next day's closing price)
+
+### 📊 Dataset Summary
+- Contains daily stock price data for NASDAQ-listed companies
+- Retrieved using the `yfinance` package
+- Tickers include major companies like Apple (AAPL), Google (GOOG), Tesla (TSLA), etc.
+- Accompanied by a metadata file (`symbols_valid_meta.csv`) describing each stock
+
+This project is a great application of time series forecasting and helps build intuition around financial modeling, feature engineering, and evaluation techniques.
+
 ---
 
-## 🧱 Project Structure
+<details open>
+<summary> <strong>🧱 Project Structure</strong></summary>
 
 ```
 stock-market-prediction-project/
 │
 ├── data/                            # All data files
-│   ├── individual_tickers/         # Historical data for specific stocks (e.g., AAPL)
-│   │   └── AAPL_historic.csv
-│   ├── grouped_tickers/            # (Optional) Folder for grouped/combined data
-│   └── symbols_valid_meta.csv      # Metadata for all NASDAQ-listed tickers
+│   ├── individual_tickers/         # Folder for historical data for specific stocks (e.g., AAPL)
+│   ├── grouped_tickers/            # Folder for grouped/combined historical data
+│   └── symbols_valid_meta.csv      # Metadata for all NASDAQ-listed tickers (given dataset)
 │
 ├── notebooks/
-│   ├── exploration/                # Initial analysis + data visualization
-│   │   ├── diana-exploration.ipynb
-│   │   ├── david-exploration.ipynb
-│   │   └── jr-exploration.ipynb
-│   └── modeling/                   # Machine learning model notebooks
+│   ├── exploration/                # Initial analysis + data visualization (individual files for exploration)
+│   └── modeling/                   # Machine learning model notebooks (where ML models will be built and evaluated)
 │
 ├── requirements.txt                # List of dependencies to install
-├── README.md                       # You're here! Project overview + setup instructions
+├── README.md                       
 └── venv/                           # Your virtual Python environment (not tracked in Git)
 ```
 
+</details>
+
 ---
 
-## ⚙️ Setup Instructions
+<details open>
+<summary> <strong>⚙️ Setup Instructions</strong></summary>
+
 
 ### ✅ 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/stock-market-prediction-project.git
+git clone https://github.com/[your-username]/stock-market-prediction-project.git
 cd stock-market-prediction-project
 ```
 
 ---
+
+<details>
+<summary>💡 What is a Virtual Environment?</summary>
+
+A virtual environment is an isolated space where all project-specific Python packages are installed.  
+This prevents version conflicts and keeps your global Python installation clean — making sure you and your teammates all work in the same consistent environment.
+
+</details>
 
 ### ✅ 2. Create a Virtual Environment (First Time Only)
 
@@ -62,6 +87,24 @@ You should now see `(venv)` in your terminal prompt.
 
 ---
 
+### 🔁 Every Time You Reopen the Project
+
+Before running or modifying anything in this project, **you must re-activate your virtual environment**.
+
+- **Windows**:
+  ```bash
+  .\venv\Scripts\activate
+  ```
+
+- **Mac/Linux**:
+  ```bash
+  source venv/bin/activate
+  ```
+
+Make sure `(venv)` appears in your terminal before you start working.
+
+---
+
 ### ✅ 3. Install Required Packages
 
 ```bash
@@ -72,50 +115,27 @@ This installs all necessary libraries like `pandas`, `matplotlib`, `seaborn`, `y
 
 ---
 
-### ✅ 4. Run Jupyter Notebooks in VS Code
+### ✅ 4. Learn to Use Jupyter Notebooks 
 
-- Open the repo in VS Code
-- Click any `.ipynb` file to open it in the interactive notebook interface
-- Use `Shift + Enter` to run cells
-- Use the sidebar or file tree to navigate between exploration and modeling notebooks
+If you're new to Jupyter Notebooks or want a refresher, here are some helpful video walkthroughs and tutorials:
 
----
+- 📺 [Jupyter Notebooks in VS Code Walkthrough](https://www.youtube.com/watch?v=DA6ZAHBPF1U)
+- 📘 [Getting Started with Jupyter Notebooks in VS Code](https://www.youtube.com/watch?v=suAkMeWJ1yE)
+- 🧠 [Why Use Jupyter Notebooks?](https://www.youtube.com/watch?v=cKFp8DBF75Y)
 
-## 🔍 Notebook Breakdown
+These will help you understand how to navigate, run cells, and make the most out of your notebooks for this project.
 
-| Notebook                     | Purpose |
-|------------------------------|---------|
-| `diana-exploration.ipynb`    | Loads AAPL data, visualizes prices & trends |
-| `david-exploration.ipynb`    | Teammate's exploration of another stock |
-| `jr-exploration.ipynb`       | Metadata analysis and filtering |
-| `modeling/`                  | Where ML models (e.g., regression) will be built and evaluated |
+</details>
 
 ---
 
-## 📦 Data Files
+<details open>
+<summary> <strong>🙌 Contributions</strong> </summary>
 
-- **`symbols_valid_meta.csv`**: Metadata about NASDAQ stocks (used to filter valid tickers)
-- **`AAPL_historic.csv`**: Apple Inc. stock data pulled from Yahoo Finance
-- Add more stocks in `individual_tickers/` for multi-stock modeling
-
----
-
-## 🧠 Model Goal
-
-> **Input**: Historical stock data  
-> **Output**: Future closing price prediction
-
-We’ll experiment with different regression models to forecast prices using features like closing price, volume, moving averages, and trends.
-
----
-
-## 🙌 Contributions
 
 Each team member can:
 - Add their own exploration notebook inside `notebooks/exploration/`
 - Add model versions inside `notebooks/modeling/`
 - Pull/Push from GitHub regularly to stay in sync
 
----
-
-Let me know if you want help structuring your model notebook or if you need a template for reporting results!
+</details>
