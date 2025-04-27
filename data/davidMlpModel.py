@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 #load data here/use yahoo api figure this out
-csv_AAPL = pd.read_csv('individual_tickers/AAPL_historic.csv')
+csv_AAPL = pd.read_csv('individual_tickers/AAPL_historic.csv') #if you want latest date change to yahoo csv
 csv_AAPL['Date'] = pd.to_datetime(csv_AAPL['Date'])
 features = ['Close','High','Low','Open','Volume']
 scaler = StandardScaler()
