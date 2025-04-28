@@ -1,0 +1,5 @@
+exp_id,run_date,description,window_size,feature_cols,layers,dropout,learning_rate,batch_size_input,epochs_run,num_params,train_time,train_rmse,val_rmse,test_rmse
+0d5c2d53,2025-04-28,Simple DNN: 1 feature (Close),20,['Close'],64,N/A,N/A,32,14,1409,2.03,26.231670379638672,33.18650817871094,29.534440994262695
+c4781d91,2025-04-28,Added "Return" feature,20,"['Close', 'Return']",64,N/A,N/A,32,12,2689,1.89,24.70888328552246,34.03421401977539,24.912935256958008
+7a6ab111,2025-04-28,Added "Volume" feature,20,"['Close', 'Return', 'Volume']",64,N/A,N/A,32,11,3969,1.71,23.831241607666016,31.155309677124023,36.03254699707031
+ffd0fa45,2025-04-28,Added EMA10,20,"['Close', 'Return', 'Volume', 'EMA10']",64,N/A,N/A,32,10,5249,1.95,24.85228157043457,33.39552307128906,28.278934478759766
