@@ -3,3 +3,9 @@ exp_id,run_date,description,window_size,feature_cols,layers,dropout,learning_rat
 c4781d91,2025-04-28,Added "Return" feature,20,"['Close', 'Return']",64,N/A,N/A,32,12,2689,1.89,24.70888328552246,34.03421401977539,24.912935256958008
 7a6ab111,2025-04-28,Added "Volume" feature,20,"['Close', 'Return', 'Volume']",64,N/A,N/A,32,11,3969,1.71,23.831241607666016,31.155309677124023,36.03254699707031
 ffd0fa45,2025-04-28,Added EMA10,20,"['Close', 'Return', 'Volume', 'EMA10']",64,N/A,N/A,32,10,5249,1.95,24.85228157043457,33.39552307128906,28.278934478759766
+d398461e,2025-04-29,Added Volatility20,20,"['Close', 'Return', 'Volume', 'EMA10', 'Volatility20']",64,N/A,N/A,32,9,6529,2.32,24.328567504882812,38.07461929321289,14.361407279968262
+fc5dcb14,2025-04-29,Added EMA20,20,"['Close', 'Return', 'Volume', 'EMA10', 'Volatility20', 'EMA20']",64,N/A,N/A,32,9,7809,1.68,24.310405731201172,39.247894287109375,34.66230773925781
+83b6e5c4,2025-04-29,Added RSI14,20,"['Close', 'Return', 'Volume', 'EMA10', 'Volatility20', 'EMA20', 'RSI14']",64,N/A,N/A,32,9,9089,1.56,20.730487823486328,36.95269775390625,51.919883728027344
+da9a839a,2025-04-29,Added MACD and MACD_signal,20,"['Close', 'Return', 'Volume', 'EMA10', 'Volatility20', 'EMA20', 'RSI14', 'MACD', 'MACD_signal']",64,N/A,N/A,32,16,11649,2.3,15.585956573486328,32.723052978515625,73.70298767089844
+fcaf6c13,2025-04-29,"Upgraded to 2-layer DNN with BatchNorm & Dropout, increased to 100 epochs",20,"['Close', 'Return', 'Volume', 'EMA10', 'Volatility20', 'EMA20', 'RSI14', 'MACD', 'MACD_signal']","1st layer: 128, 2nd layer: 64",0.2,0.001,32,9,32001,2.04,16.05447006225586,10.032052993774414,9.45607852935791
+
