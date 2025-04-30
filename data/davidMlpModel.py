@@ -14,7 +14,6 @@ ticker = "AAPL"
 start  = "2017-01-01"
 end    = "2025-01-01"
 csv_AAPL = yf.download(ticker, start=start, end=end).reset_index()
-# csv_AAPL = pd.read_csv('individual_tickers/AAPL_historic.csv') #if you want latest date change to yahoo csv
 csv_AAPL['Date'] = pd.to_datetime(csv_AAPL['Date'])
 features = ['Close','High','Low','Open','Volume']
 scaler = StandardScaler()
@@ -30,9 +29,15 @@ df_fe['Weekday_sin']  = np.sin(2 * np.pi * df_fe['Weekday'] / 7)
 df_fe['Weekday_cos']  = np.cos(2 * np.pi * df_fe['Weekday'] / 7)
 df_fe.dropna(inplace=True)
 
+# 5a) Create the next-day target
+df_fe['Close_next'] = df_fe['Close'].shift(-1)
+
+# 5b) Drop the final row (no next-day target)
+df_fe = df_fe.iloc[:-1]
+
 #training and testing split
-X = df_fe.drop(columns=['Date','Close'])
-y = df_fe['Close'].to_numpy().ravel()
+X = df_fe.drop(columns=['Date','Close','Close_next'])
+y = df_fe['Close_next'].to_numpy().ravel()
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, shuffle=False, random_state=42
 )
