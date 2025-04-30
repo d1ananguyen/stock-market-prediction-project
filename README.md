@@ -51,7 +51,7 @@ stock-market-prediction-project/
 
 ### ✅ 1. Clone the Repository
 ```bash
-git clone https://github.com/[your-username]/stock-market-prediction-project.git
+git clone https://github.com/d1ananguyen/stock-market-prediction-project.git
 cd stock-market-prediction-project
 ```
 
