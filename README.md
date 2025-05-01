@@ -26,15 +26,13 @@ This project is a great application of time series forecasting and helps build i
 
 ```
 stock-market-prediction-project/
-│
-├── data/                            # All data files
-│   ├── individual_tickers/         # Folder for historical data for specific stocks (e.g., AAPL)
-│   ├── grouped_tickers/            # Folder for grouped/combined historical data
-│   └── symbols_valid_meta.csv      # Metadata for all NASDAQ-listed tickers (given dataset)
-│
+│                                  # Other folders can be ignored
 ├── notebooks/
-│   ├── exploration/                # Initial analysis + data visualization (individual files for exploration)
-│   └── modeling/                   # Machine learning model notebooks (where ML models will be built and evaluated)
+│   └── final_models/              # Folder for all final trained models
+│       ├── Baselines/             # Naïve, Moving Average models for comparison
+│       ├── CNN/                   # Convolutional Neural Network models
+│       ├── DNN/                   # Deep Neural Network models
+│       └── MLP/                   # Multilayer Perceptron models
 │
 ├── requirements.txt                # List of dependencies to install
 ├── README.md                       
@@ -128,14 +126,3 @@ These will help you understand how to navigate, run cells, and make the most out
 </details>
 
 ---
-
-<details open>
-<summary> <strong>🙌 Contributions</strong> </summary>
-
-
-Each team member can:
-- Add their own exploration notebook inside `notebooks/exploration/`
-- Add model versions inside `notebooks/modeling/`
-- Pull/Push from GitHub regularly to stay in sync
-
-</details>
