@@ -30,9 +30,9 @@ stock-market-prediction-project/
 ├── notebooks/
 │   └── final_models/              # Folder for all final trained models
 │       ├── Baselines/             # Naïve, Moving Average models for comparison
-│       ├── CNN/                   # Convolutional Neural Network models
-│       ├── DNN/                   # Deep Neural Network models
-│       └── MLP/                   # Multilayer Perceptron models
+│       ├── CNN/                   # Convolutional Neural Network model
+│       ├── DNN/                   # Deep Neural Network model
+│       └── MLP/                   # Multilayer Perceptron model
 │
 ├── requirements.txt                # List of dependencies to install
 ├── README.md                       
